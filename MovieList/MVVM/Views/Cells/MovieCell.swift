@@ -43,6 +43,7 @@ class MovieCell: UITableViewCell {
     
     func setupCell(for indexPath: IndexPath) {
         if let urlStr = movieModel.posterPath, let url = URL(string: APIConstants.imageBaseUrl + urlStr) {
+            print("url: \(url)")
 //            mPosterImgView.load(url: url)
             mPosterImgView.downloaded(from: url)
         }
