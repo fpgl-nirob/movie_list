@@ -8,4 +8,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: xcodebuild -workspace MovieList.xcodeproj -scheme MovieList -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
+      run: xcodebuild -project MovieList.xcodeproj -scheme MovieList -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
