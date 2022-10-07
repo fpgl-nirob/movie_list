@@ -1,0 +1,12 @@
+name: Check Build Issues
+on:
+  pull_request:
+    branches: [ development ]
+jobs:
+  buildAndTest:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+    - name: Build
+      run: xcodebuild -workspace TheBeats.xcworkspace -scheme TheBeats -configuration Release -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
